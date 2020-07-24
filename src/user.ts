@@ -1467,7 +1467,7 @@ export class User {
             await this.#session.storeToken(token);
             return this.#session.confirmToken(key, password);
           }
-        } catch {}
+        } catch (err) {}
       }
     }
     throw Session.invalidMsg;
